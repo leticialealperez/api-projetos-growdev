@@ -25,7 +25,7 @@ export async function updateProjectValidate(
 
     if (
       status &&
-      ![(StatusProject.InProgress, StatusProject.Done)].includes(status)
+      ![StatusProject.InProgress, StatusProject.Done].includes(status)
     ) {
       throw new HTTPError(
         400,
